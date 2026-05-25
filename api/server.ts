@@ -1,5 +1,7 @@
 // @ts-nocheck
 import server from "../dist/server/server.js";
+import fs from "fs";
+import path from "path";
 
 export const config = {
   runtime: 'nodejs',
@@ -12,7 +14,33 @@ export default async function handler(req, res) {
   try {
     const protocol = req.headers['x-forwarded-proto'] || 'https';
     const host = req.headers['x-forwarded-host'] || req.headers.host || 'localhost';
-    const url = new URL(req.url || '/', `${protocol}://${host}`);
+    const urlStr = req.url || '/';
+    const url = new URL(urlStr, `${protocol}://${host}`);
+    
+    // --- STATIC ASSET SERVING ---
+    // This makes the deployment foolproof regardless of Vercel Output Directory settings
+    if (urlStr.startsWith('/assets/') || urlStr === '/favicon.ico') {
+      const filePath = path.join(process.cwd(), 'dist', 'client', urlStr.split('?')[0]);
+      if (fs.existsSync(filePath)) {
+        if (filePath.endsWith('.css')) res.setHeader('Content-Type', 'text/css');
+        else if (filePath.endsWith('.js')) res.setHeader('Content-Type', 'application/javascript');
+        else if (filePath.endsWith('.svg')) res.setHeader('Content-Type', 'image/svg+xml');
+        else if (filePath.endsWith('.woff2')) res.setHeader('Content-Type', 'font/woff2');
+        else if (filePath.endsWith('.woff')) res.setHeader('Content-Type', 'font/woff');
+        else if (filePath.endsWith('.ttf')) res.setHeader('Content-Type', 'font/ttf');
+        else if (filePath.endsWith('.png')) res.setHeader('Content-Type', 'image/png');
+        else if (filePath.endsWith('.webp')) res.setHeader('Content-Type', 'image/webp');
+        else if (filePath.endsWith('.ico')) res.setHeader('Content-Type', 'image/x-icon');
+        else if (filePath.endsWith('.json')) res.setHeader('Content-Type', 'application/json');
+        
+        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+        const content = fs.readFileSync(filePath);
+        res.statusCode = 200;
+        res.end(content);
+        return;
+      }
+    }
+    // --- END STATIC ASSET SERVING ---
     
     const headers = new Headers();
     for (const key in req.headers) {
