@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "industrial-pc",
+    "modelNo": "",
+    "title": "Industrial PC"
+  },
+  {
+    "slug": "industrial-rackmount-pc",
+    "modelNo": "",
+    "title": "Industrial Rackmount PC and Workstation PC"
+  },
+  {
+    "slug": "industrial-rugged-laptop-gpu",
+    "modelNo": "",
+    "title": "Industrial Rugged Laptop With GPU"
+  },
+  {
+    "slug": "industrial-touch-screen-display",
+    "modelNo": "",
+    "title": "Industrial Touch Screen Display"
+  },
+  {
+    "slug": "industrial-data-communication",
+    "modelNo": "",
+    "title": "Industrial Data Communication Products"
+  },
+  {
+    "slug": "industrial-ethernet-switches",
+    "modelNo": "",
+    "title": "Industrial Ethernet Switches"
+  }
+]
