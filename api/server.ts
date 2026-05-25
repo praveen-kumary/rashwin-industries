@@ -3,6 +3,9 @@ import server from "../dist/server/server.js";
 
 export const config = {
   runtime: 'nodejs',
+  api: {
+    bodyParser: false, // Disables Vercel's default body parser so we can read the stream
+  },
 };
 
 export default async function handler(req, res) {
