@@ -1,0 +1,7 @@
+# DO NOT REMOVE. ALERTS ORIGINATING FROM MACHINE GENERATED CHANGES.
+# LITESPEED_NODEJS_APP
+<IfModule litespeed>
+  PassengerAppType node
+  PassengerStartupFile app.js
+</IfModule>
+# LITESPEED_NODEJS_APP
