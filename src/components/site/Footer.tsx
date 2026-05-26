@@ -81,27 +81,22 @@ export function Footer() {
             </li>
             <li>
               <Link to="/products/industrial-rackmount-pc" className="hover:text-accent transition-colors">
-                Rackmount & Workstation PC
+                Industrial Rackmount PC
               </Link>
             </li>
             <li>
               <Link to="/products/industrial-touch-screen-display" className="hover:text-accent transition-colors">
-                Touch Screen Displays
+                Industrial Touch Screen Display
               </Link>
             </li>
             <li>
               <Link to="/products/industrial-data-communication" className="hover:text-accent transition-colors">
-                Ethernet Switches
+                Industrial Data Communication
               </Link>
             </li>
             <li>
-              <Link to="/products/industrial-data-communication" className="hover:text-accent transition-colors">
-                Protocol Converters
-              </Link>
-            </li>
-            <li>
-              <Link to="/products" className="hover:text-accent transition-colors">
-                GPS Vehicle Tracking
+              <Link to="/products/industrial-ethernet-switches" className="hover:text-accent transition-colors">
+                Industrial Ethernet Switches
               </Link>
             </li>
           </ul>
