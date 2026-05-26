@@ -1,8 +1,18 @@
-# DO NOT REMOVE. ALERTS ORIGINATING FROM MACHINE GENERATED CHANGES.
-# LITESPEED_NODEJS_APP
-<IfModule litespeed>
-  PassengerAppType node
-  PassengerAppRoot /home/u36450613/domains/orange-anteater-696255.hostingersite.com/public_html
-  PassengerStartupFile app.js
-</IfModule>
-# LITESPEED_NODEJS_APP
+# High-Performance Static Routing for Rashwin Industries
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /
+
+# 1. Redirect requests to directories without a trailing slash (e.g., /about -> /about/)
+# This ensures that /about/index.html is resolved correctly by the server
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
+
+# 2. If the requested path is an existing file or directory, serve it directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 3. Fallback for any client-side routes not captured during static generation
+RewriteRule ^ index.html [L]

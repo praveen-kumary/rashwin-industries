@@ -148,6 +148,14 @@ if (typeof process !== "undefined" && !process.env.VERCEL) {
     }
   });
 
+  server.on("error", (err: any) => {
+    if (err.code === "EADDRINUSE") {
+      console.log(`Port ${port} is already in use (likely during build-time prerendering). Skipping standalone server start.`);
+    } else {
+      console.error("HTTP server error:", err);
+    }
+  });
+
   server.listen(port, () => {
     console.log(`Server listening on http://localhost:${port}`);
   });
