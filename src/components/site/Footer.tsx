@@ -102,9 +102,22 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 py-5 text-center text-xs text-primary-foreground/60 sm:px-6 lg:px-8">
-          Copyright 2026, Rashwin Industries. All rights reserved.
+      <div className="border-t border-black/10 dark:border-white/10">
+        <div className="mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 max-w-7xl px-4 py-5 text-xs text-primary-foreground/60 sm:px-6 lg:px-8">
+          <div className="text-center sm:text-left">
+            Copyright 2026, Rashwin Industries. All rights reserved.
+          </div>
+          <div className="text-center sm:text-right">
+            Designed by{" "}
+            <a 
+              href="https://www.metromindz.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="font-medium hover:text-accent transition-colors"
+            >
+              Metromindz
+            </a>
+          </div>
         </div>
       </div>
     </footer>
