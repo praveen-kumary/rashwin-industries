@@ -59,9 +59,11 @@ function ProductsPage() {
             {products.map((category) => {
               const Icon = category.icon;
               return (
-                <div
+                <Link
+                  to="/products/$categorySlug"
+                  params={{ categorySlug: category.slug }}
                   key={category.slug}
-                  className="group flex flex-col justify-between rounded-2xl border border-border bg-card p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md"
+                  className="group flex flex-col justify-between rounded-2xl border border-border bg-card p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   <div>
                     <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-secondary text-primary transition-all duration-300 group-hover:bg-accent group-hover:text-accent-foreground">
@@ -101,19 +103,17 @@ function ProductsPage() {
                   </div>
 
                   <div className="mt-8 pt-4">
-                    <Link
-                      to="/products/$categorySlug"
-                      params={{ categorySlug: category.slug }}
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-secondary py-3 text-sm font-semibold text-primary transition-all duration-200 hover:bg-accent hover:text-accent-foreground shadow-sm"
+                    <div
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-secondary py-3 text-sm font-semibold text-primary transition-all duration-200 group-hover:bg-accent group-hover:text-accent-foreground shadow-sm"
                     >
                       Explore Products
                       <ArrowRight
                         size={16}
                         className="transition-transform group-hover:translate-x-1"
                       />
-                    </Link>
+                    </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
