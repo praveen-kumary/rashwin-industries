@@ -71,7 +71,7 @@ export function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:py-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center max-w-[60%] sm:max-w-[70%]">
-          <img src="/rashwin.webp" alt="Rashwin Industries Logo" className="h-14 sm:h-16 md:h-16 w-auto object-contain scale-110 origin-left drop-shadow-[0_0_8px_rgba(212,175,55,0.6)] transition-all duration-300 hover:drop-shadow-[0_0_12px_rgba(212,175,55,0.9)]" />
+          <img src="/images/rashwin-logo.webp" alt="Rashwin Industries Logo" className="h-14 sm:h-16 md:h-16 w-auto object-contain scale-110 origin-left drop-shadow-[0_0_8px_rgba(212,175,55,0.6)] transition-all duration-300 hover:drop-shadow-[0_0_12px_rgba(212,175,55,0.9)]" />
         </Link>
 
         {/* Desktop Navigation Links */}

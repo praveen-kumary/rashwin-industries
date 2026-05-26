@@ -2,6 +2,7 @@
 # LITESPEED_NODEJS_APP
 <IfModule litespeed>
   PassengerAppType node
+  PassengerAppRoot /home/u36450613/domains/orange-anteater-696255.hostingersite.com/public_html
   PassengerStartupFile app.js
 </IfModule>
 # LITESPEED_NODEJS_APP
