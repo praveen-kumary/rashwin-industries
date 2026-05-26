@@ -6,7 +6,7 @@ export const productImages: Record<string, string> = {
   // ═══════════════════════════════════════════════
   "industrial-edge-computing": "/products/industrial-edge-computing.webp",
   "industrial-touch-panel-pc": "/products/industrial-touch-panel-pc.webp",
-  "industrial-server-motherboard": "/products/industrial-server-motherboard.webp",
+  "industrial-server-motherboard": "/products/Industrial Server Motherboard.jpg",
   "android-motherboard": "/products/android-motherboard.webp",
   "industrial-rackmount-server-pc": "/products/industrial-rackmount-server-pc.webp",
   "industrial-rugged-laptop-with-gpu": "/products/industrial-rugged-laptop-with-gpu.webp",
@@ -137,10 +137,10 @@ export const productImages: Record<string, string> = {
   // ═══════════════════════════════════════════════
   // SERVER MOTHERBOARD ITEMS
   // ═══════════════════════════════════════════════
-  "mt-ser-mb-600-xe": "/products/model-no-mt-ser-mb-600-xe.webp",
-  "mt-ser-mb-620-xe": "/products/model-no-mt-ser-mb-620-xe.webp",
-  "mt-ser-mb-810-xe": "/products/model-no-mt-ser-mb-810-xe.webp",
-  "mt-ser-mb-920-xe": "/products/model-no-mt-ser-mb-920-xe.webp",
+  "mt-ser-mb-600-xe": "/products/Industrial Server Motherboard.jpg",
+  "mt-ser-mb-620-xe": "/products/Industrial Server Motherboard.jpg",
+  "mt-ser-mb-810-xe": "/products/Industrial Server Motherboard.jpg",
+  "mt-ser-mb-920-xe": "/products/Industrial Server Motherboard.jpg",
 
   // ═══════════════════════════════════════════════
   // ANDROID MOTHERBOARD ITEMS

@@ -52,9 +52,9 @@ function Home() {
       <Hero />
 
       {/* ========== PRODUCTS PREVIEW SECTION ========== */}
-      <section className="bg-secondary py-20">
+      <section className="bg-secondary py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+          <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <div>
               <span className="text-sm font-semibold uppercase tracking-wider text-accent">
                 Our Range
@@ -78,9 +78,9 @@ function Home() {
       </section>
 
       {/* ========== INDUSTRIES WE SERVE SECTION ========== */}
-      <section className="bg-background py-20">
+      <section className="bg-background py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             {/* Left Column: Title and Industries Grid */}
             <div>
               <span className="text-sm font-semibold uppercase tracking-wider text-accent">
@@ -94,7 +94,7 @@ function Home() {
                 performance required by the world's most critical sectors.
               </p>
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 {[
                   {
                     name: "Textile Industry",
@@ -173,9 +173,9 @@ function Home() {
       </section>
 
       {/* ========== WHY CHOOSE US SECTION ========== */}
-      <section className="bg-secondary py-20">
+      <section className="bg-secondary py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 text-center">
+          <div className="mb-8 text-center">
             <span className="text-sm font-semibold uppercase tracking-wider text-accent">
               Why Rashwin
             </span>
@@ -233,12 +233,12 @@ function Home() {
       </section>
 
       {/* ========== TRUST & CERTIFICATIONS SECTION ========== */}
-      <section className="bg-background py-20">
+      <section className="bg-background py-14">
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent/10 text-accent">
             <ShieldCheck size={26} />
           </div>
-          <h2 className="mt-6 font-display text-3xl font-bold text-primary sm:text-4xl">
+          <h2 className="mt-4 font-display text-3xl font-bold text-primary sm:text-4xl">
             A leading name in industrial computing
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
@@ -246,7 +246,7 @@ function Home() {
             Industrial Panel PCs, Industrial Embedded Box PCs, Industrial Rackmount Computers, Touch
             Screens, Ethernet Converters, and RS232 Repeaters.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
             {[
               { label: "ISO Certified", icon: Award },
               { label: "CE Compliant", icon: ShieldCheck },
@@ -265,7 +265,7 @@ function Home() {
       </section>
 
       {/* ========== CALL TO ACTION / CONTACT SECTION ========== */}
-      <section className="bg-primary py-16">
+      <section className="bg-primary py-12">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-primary-foreground sm:text-4xl">
             Ready to discuss your industrial requirements?
@@ -274,7 +274,7 @@ function Home() {
             Get in touch with our team for product inquiries, technical support, or partnership
             opportunities.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6">
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6">
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
@@ -284,7 +284,7 @@ function Home() {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <div className="flex items-center gap-2 text-primary-foreground/80">
                 <Phone size={18} />
-                <span>+91 8608520520</span>
+                <span>+91 9620994949</span>
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/80">
                 <Mail size={18} />

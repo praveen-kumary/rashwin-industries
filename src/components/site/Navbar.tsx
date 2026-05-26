@@ -69,15 +69,9 @@ export function Navbar() {
       }`}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 sm:gap-2.5 max-w-[70%]">
-          <span className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm shrink-0">
-            <Factory size={16} className="sm:w-[18px] sm:h-[18px]" />
-          </span>
-          <span className="font-display text-[15px] sm:text-lg font-bold tracking-tight text-primary truncate">
-            Rashwin <span className="text-accent hidden sm:inline">Industries</span>
-          </span>
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:py-4 sm:px-6 lg:px-8">
+        <Link to="/" className="flex items-center max-w-[60%] sm:max-w-[70%]">
+          <img src="/rashwin.png" alt="Rashwin Industries Logo" className="h-14 sm:h-16 md:h-20 w-auto object-contain scale-110 origin-left drop-shadow-[0_0_8px_rgba(230,194,128,0.6)] transition-all duration-300 hover:drop-shadow-[0_0_12px_rgba(230,194,128,0.9)]" />
         </Link>
 
         {/* Desktop Navigation Links */}
@@ -277,9 +271,38 @@ export function Navbar() {
       {open && (
         <div className="border-t border-border bg-background md:hidden shadow-lg overflow-y-auto max-h-[calc(100vh-4rem)]">
           <nav className="mx-auto flex max-w-7xl flex-col px-4 py-4 space-y-1">
-            <Link to="/" onClick={() => setOpen(false)} className="rounded-md px-3 py-2.5 text-base font-semibold text-foreground hover:bg-secondary">Home</Link>
-            <Link to="/about" onClick={() => setOpen(false)} className="rounded-md px-3 py-2.5 text-base font-semibold text-foreground hover:bg-secondary">About</Link>
-            {/* ... other standard elements */}
+            <Link to="/" onClick={() => setOpen(false)} className="rounded-md px-3 py-2.5 text-base font-semibold text-foreground hover:bg-secondary transition-colors">Home</Link>
+            <Link to="/about" onClick={() => setOpen(false)} className="rounded-md px-3 py-2.5 text-base font-semibold text-foreground hover:bg-secondary transition-colors">About</Link>
+            
+            <div className="my-2 border-y border-border/40 py-4">
+              <span className="mb-3 block px-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Products Portfolio</span>
+              <div className="space-y-4">
+                {divisions.map((div) => (
+                  <div key={div.name} className="px-3">
+                    <span className="mb-1.5 block text-sm font-bold text-primary">{div.name}</span>
+                    <div className="ml-1 space-y-1 border-l-2 border-border/50 pl-3">
+                      {div.categories.map((cat) => (
+                        <Link
+                          key={cat.slug}
+                          to="/products/$categorySlug"
+                          params={{ categorySlug: cat.slug }}
+                          onClick={() => setOpen(false)}
+                          className="block py-1 text-sm text-muted-foreground transition-colors hover:text-accent"
+                        >
+                          {cat.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <Link to="/products" onClick={() => setOpen(false)} className="mt-4 block px-3 text-sm font-bold text-accent hover:underline">
+                View All Categories &rarr;
+              </Link>
+            </div>
+            
+            <Link to="/contact" onClick={() => setOpen(false)} className="rounded-md px-3 py-2.5 text-base font-semibold text-foreground hover:bg-secondary transition-colors">Contact</Link>
+            <Link to="/contact" onClick={() => setOpen(false)} className="mt-4 rounded-md bg-accent px-4 py-3 text-center text-base font-semibold text-accent-foreground shadow-sm transition-colors hover:bg-accent/90">Get a Quote</Link>
           </nav>
         </div>
       )}

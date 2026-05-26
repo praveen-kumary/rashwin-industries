@@ -6,11 +6,8 @@ export function Footer() {
     <footer className="bg-primary text-primary-foreground">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-accent">
-              <Factory size={20} />
-            </span>
-            <span className="font-display text-lg font-bold">Rashwin Industries</span>
+          <div className="flex items-center gap-3">
+            <img src="/rashwin.png" alt="Rashwin Industries Logo" className="h-14 sm:h-16 md:h-20 w-auto object-contain scale-110 origin-left drop-shadow-[0_0_12px_rgba(230,194,128,0.5)] transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(230,194,128,0.8)]" />
           </div>
           <p className="mt-4 text-sm leading-relaxed text-primary-foreground/75">
             Manufacturers and suppliers of industrial computing & networking products since 2012.
@@ -45,8 +42,8 @@ export function Footer() {
             </li>
             <li className="flex gap-3">
               <Phone size={16} className="mt-0.5 shrink-0 text-accent" />{" "}
-              <a href="tel:+918608520520" className="hover:text-accent">
-                +91 8608520520
+              <a href="tel:+919620994949" className="hover:text-accent">
+                +91 9620994949
               </a>
             </li>
           </ul>

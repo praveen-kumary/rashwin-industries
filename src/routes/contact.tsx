@@ -48,7 +48,7 @@ function Contact() {
 
   return (
     <SiteLayout>
-      <section className="bg-primary py-16 text-primary-foreground sm:py-20">
+      <section className="bg-primary py-10 text-primary-foreground sm:py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-sm font-semibold uppercase tracking-wider text-accent">
             Contact
@@ -61,7 +61,7 @@ function Contact() {
         </div>
       </section>
 
-      <section className="bg-secondary py-16 sm:py-20">
+      <section className="bg-secondary py-12 sm:py-14">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           {/* Info */}
           <div className="space-y-6">
@@ -78,7 +78,7 @@ function Contact() {
                 body: "info@rashwinindustries.com",
                 href: "mailto:info@rashwinindustries.com",
               },
-              { Icon: Phone, title: "Phone", body: "+91 8608520520", href: "tel:+918608520520" },
+              { Icon: Phone, title: "Phone", body: "+91 9620994949", href: "tel:+919620994949" },
               {
                 Icon: Clock,
                 title: "Business Hours",

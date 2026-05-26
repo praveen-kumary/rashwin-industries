@@ -49,7 +49,7 @@ function CategoryIndexPage() {
   if (!category) {
     return (
       <SiteLayout>
-        <div className="flex min-h-[50vh] flex-col items-center justify-center bg-background px-4 py-20 text-center">
+        <div className="flex min-h-[50vh] flex-col items-center justify-center bg-background px-4 py-12 text-center">
           <h2 className="font-display text-3xl font-bold text-primary">
             Category Not Found
           </h2>
@@ -72,7 +72,7 @@ function CategoryIndexPage() {
   return (
     <SiteLayout>
       {/* ── Hero Section ─────────────────────────────────────────── */}
-      <section className="relative bg-primary py-16 sm:py-20 text-primary-foreground overflow-hidden">
+      <section className="relative bg-primary py-10 sm:py-14 text-primary-foreground overflow-hidden">
         {/* Decorative gradient */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(251,146,60,0.12),transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(251,146,60,0.06),transparent_50%)]" />
@@ -97,7 +97,7 @@ function CategoryIndexPage() {
                 <Icon size={14} />
                 <span>{category.series.length} Product Series</span>
               </div>
-              <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl leading-[1.1]">
+              <h1 className="mt-5 font-display text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl leading-[1.1]">
                 {category.title}
               </h1>
               <p className="mt-5 text-base sm:text-lg text-primary-foreground/75 leading-relaxed max-w-2xl">
@@ -109,7 +109,7 @@ function CategoryIndexPage() {
       </section>
 
       {/* ── Series Grid ──────────────────────────────────────────── */}
-      <section className="bg-secondary py-16 sm:py-20">
+      <section className="bg-secondary py-12 sm:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {category.series.map((sub) => (
@@ -167,7 +167,7 @@ function CategoryIndexPage() {
       </section>
 
       {/* ── CTA Section ──────────────────────────────────────────── */}
-      <section className="relative bg-primary py-16 sm:py-20 overflow-hidden">
+      <section className="relative bg-primary py-10 sm:py-14 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(251,146,60,0.08),transparent_60%)]" />
         <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-widest text-accent">

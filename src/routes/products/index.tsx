@@ -26,7 +26,7 @@ function ProductsPage() {
   return (
     <SiteLayout>
       {/* Hero Header */}
-      <section className="relative overflow-hidden bg-primary py-20 text-primary-foreground sm:py-24">
+      <section className="relative overflow-hidden bg-primary py-12 text-primary-foreground sm:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(251,146,60,0.15),transparent_45%)]" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-sm font-semibold uppercase tracking-wider text-accent">
@@ -35,7 +35,7 @@ function ProductsPage() {
           <h1 className="mt-3 font-display text-4xl font-bold tracking-tight sm:text-6xl max-w-3xl leading-tight">
             Our Industrial Range
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-primary-foreground/80 sm:text-xl leading-relaxed">
+          <p className="mt-4 max-w-2xl text-lg text-primary-foreground/80 sm:text-xl leading-relaxed">
             Reliable, durable, and precisely engineered solutions for industrial computing,
             automation, and networking.
           </p>
@@ -43,9 +43,9 @@ function ProductsPage() {
       </section>
 
       {/* Categories Grid */}
-      <section className="bg-secondary py-20 sm:py-24">
+      <section className="bg-secondary py-14 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
+          <div className="mb-8">
             <h2 className="font-display text-2xl font-bold text-primary sm:text-3xl">
               Browse Categories
             </h2>
@@ -121,7 +121,7 @@ function ProductsPage() {
       </section>
 
       {/* Quality Standards Banner */}
-      <section className="bg-background py-16 border-t border-border/40">
+      <section className="bg-background py-12 border-t border-border/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-3 lg:items-center">
             <div className="lg:col-span-1">

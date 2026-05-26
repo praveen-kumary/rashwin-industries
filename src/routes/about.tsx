@@ -59,80 +59,80 @@ function About() {
         <div className="absolute -right-16 -top-16 md:-right-32 md:-top-32 h-[300px] w-[300px] md:h-[600px] md:w-[600px] rounded-full bg-accent/20 blur-[80px] md:blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
         <div className="absolute -left-16 -bottom-16 md:-left-32 md:-bottom-32 h-[250px] w-[250px] md:h-[500px] md:w-[500px] rounded-full bg-accent/15 blur-[60px] md:blur-[100px] animate-pulse" style={{ animationDuration: '10s' }} />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-24 lg:px-8">
-          <div className="relative mx-auto max-w-4xl p-4 sm:p-8 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-out text-center flex flex-col items-center">
-            <div className="relative z-10 mb-6 flex flex-wrap items-center justify-center gap-3">
-              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-accent/90 border border-accent/20 bg-accent/10 px-3 py-1.5 rounded-full">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:py-14 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-center animate-in fade-in slide-in-from-bottom-4 duration-700 ease-out">
+            {/* Left Column — Headline & Description */}
+            <div>
+              <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-widest text-accent/90 border border-accent/20 bg-accent/10 px-3 py-1.5 rounded-full">
                 Since 2012
               </span>
-            </div>
 
-            <h1 className="relative z-10 font-display text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
-              <span className="text-accent">Transforming</span> businesses
-              <br />
-              through intelligent technology
-            </h1>
+              <h1 className="mt-4 font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
+                <span className="text-accent">Transforming</span> businesses
+                through intelligent technology
+              </h1>
 
-            <div className="relative z-10 mt-8 space-y-5 text-base sm:text-lg leading-relaxed text-primary-foreground/80 max-w-3xl">
-              <p>
-                Rashwin Industries is a leading{" "}
-                <span className="font-semibold text-accent">
-                  System Integration and IT Solutions
-                </span>{" "}
-                company.
+              <p className="mt-4 text-sm sm:text-base leading-relaxed text-primary-foreground/80 max-w-xl">
+                Rashwin Industries is a leading <span className="font-semibold text-accent">System Integration and IT Solutions</span> company — delivering end-to-end IT consulting, infrastructure design, integration, and security for resilient digital environments.
               </p>
-              <p>
-                We provide comprehensive services in IT consulting, infrastructure design,
-                integration, and security — enabling enterprises to build resilient,
-                high-performing, and secure digital environments.
-              </p>
-              <div className="mx-auto my-8 max-w-2xl rounded-2xl border border-accent/20 bg-white/5 p-6 backdrop-blur-sm shadow-inner">
-                <p className="font-display text-lg sm:text-xl font-medium italic text-primary-foreground">
+
+              <div className="mt-4 rounded-xl border border-accent/20 bg-white/5 px-4 py-3 backdrop-blur-sm max-w-lg">
+                <p className="font-display text-sm sm:text-base font-medium italic text-primary-foreground/90">
                   "We don't just implement technology — we enable transformation."
                 </p>
               </div>
-              <p>
-                From network and data center solutions to security and managed services, we
-                deliver end-to-end support designed to simplify management, reduce risk, and
-                improve agility. Our long-term partnerships are built on trust, transparency, and
-                measurable outcomes.
-              </p>
-            </div>
-          </div>
 
-          <div className="mt-16 border-t border-white/10 pt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-150 ease-out fill-mode-both">
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {[
-                { value: "50+", label: "Enterprise Clients", icon: Building2 },
-                { value: "25+", label: "Technology Partners", icon: Handshake },
-                { value: "100%", label: "Project Success Rate", icon: TrendingUp },
-                { value: "24/7", label: "Technical Support", icon: ShieldCheck },
-              ].map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5 text-center flex flex-col items-center"
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
                 >
-                  <stat.icon size={28} className="text-accent mb-3" />
-                  <div className="font-display text-4xl font-bold">{stat.value}</div>
-                  <div className="mt-2 text-sm text-primary-foreground/60 uppercase tracking-wide font-medium">{stat.label}</div>
-                </div>
-              ))}
+                  Get Started <ArrowRight size={15} />
+                </Link>
+                <Link
+                  to="/products"
+                  className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/5 px-5 py-2.5 text-sm font-semibold backdrop-blur transition-colors hover:bg-white/10"
+                >
+                  Explore Products
+                </Link>
+              </div>
             </div>
 
-            {/* Trust Badge */}
-            <div className="mt-10 mx-auto flex flex-wrap items-center justify-center gap-4 rounded-full border border-accent/20 bg-accent/10 px-8 py-3 max-w-fit shadow-md">
-              <Award size={20} className="text-accent" />
-              <span className="text-sm font-semibold tracking-wide">ISO & CE Certified</span>
-              <div className="hidden sm:block h-5 w-px bg-white/20" />
-              <BadgeCheck size={20} className="text-accent" />
-              <span className="text-sm font-semibold tracking-wide">Industry Compliant</span>
+            {/* Right Column — Stats Grid */}
+            <div className="animate-in fade-in slide-in-from-right-8 duration-1000 ease-out">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                {[
+                  { value: "50+", label: "Enterprise Clients", icon: Building2 },
+                  { value: "25+", label: "Technology Partners", icon: Handshake },
+                  { value: "100%", label: "Success Rate", icon: TrendingUp },
+                  { value: "24/7", label: "Technical Support", icon: ShieldCheck },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="group rounded-xl border border-white/10 bg-white/5 p-4 sm:p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:border-accent/40 text-center"
+                  >
+                    <stat.icon size={20} className="mx-auto text-accent mb-2 transition-transform duration-300 group-hover:scale-110" />
+                    <div className="font-display text-2xl sm:text-3xl font-bold">{stat.value}</div>
+                    <div className="mt-1 text-[11px] sm:text-xs text-primary-foreground/60 uppercase tracking-wide font-medium">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Trust Badge */}
+              <div className="mt-4 flex flex-wrap items-center justify-center gap-3 rounded-xl border border-accent/20 bg-accent/10 px-5 py-2.5">
+                <Award size={16} className="text-accent" />
+                <span className="text-xs sm:text-sm font-semibold tracking-wide">ISO & CE Certified</span>
+                <div className="h-4 w-px bg-white/20" />
+                <BadgeCheck size={16} className="text-accent" />
+                <span className="text-xs sm:text-sm font-semibold tracking-wide">Industry Compliant</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ========== WHY CHOOSE STAUNCH (4 Pillars) ========== */}
-      <section className="bg-background py-20">
+      <section className="bg-background py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-sm font-semibold uppercase tracking-wider text-accent">
@@ -146,7 +146,7 @@ function About() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {/* Pillar 1 */}
             <div className="group relative rounded-2xl border border-border bg-card p-8 text-center transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -210,9 +210,9 @@ function About() {
       </section>
 
       {/* ========== OUR STORY SECTION ========== */}
-      <section className="bg-secondary py-20">
+      <section className="bg-secondary py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2">
+          <div className="grid gap-8 lg:grid-cols-2">
             <div>
               <span className="text-sm font-semibold uppercase tracking-wider text-accent">
                 Our Story
@@ -274,9 +274,9 @@ function About() {
       </section>
 
       {/* ========== TEAM SECTION ========== */}
-      <section className="bg-background py-20">
+      <section className="bg-background py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 text-center">
+          <div className="mb-8 text-center">
             <span className="text-sm font-semibold uppercase tracking-wider text-accent">
               Meet The Team
             </span>
@@ -288,15 +288,15 @@ function About() {
             </p>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 max-w-5xl mx-auto mt-12">
+          <div className="grid gap-8 sm:grid-cols-2 max-w-5xl mx-auto mt-8">
 
-            {/* CEO - Ashhwini Singh */}
+            {/* CEO - Ashwini Singh */}
             <div className="rounded-xl border border-border bg-card overflow-hidden transition-all hover:-translate-y-1 hover:shadow-lg">
               <div className="bg-primary p-8 text-center text-primary-foreground">
                 <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-accent text-accent-foreground">
                   <User size={48} />
                 </div>
-                <h3 className="mt-4 text-xl font-bold">Ashhwini Singh</h3>
+                <h3 className="mt-4 text-xl font-bold">Ashwini Singh</h3>
                 <p className="text-sm text-primary-foreground/70">CEO</p>
               </div>
               <div className="p-6">
@@ -334,12 +334,12 @@ function About() {
       </section>
 
       {/* ========== GET STARTED / CTA SECTION ========== */}
-      <section className="bg-primary py-20 text-primary-foreground">
+      <section className="bg-primary py-14 text-primary-foreground">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent/20 text-accent">
             <Rocket size={26} />
           </div>
-          <h2 className="mt-6 font-display text-3xl font-bold sm:text-4xl">
+          <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl">
             Start Connecting With Us Today!
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/70">
@@ -347,7 +347,7 @@ function About() {
             that drive growth, security, and success. Our experts are ready to turn your vision into
             reality with intelligent IT solutions.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
@@ -365,7 +365,7 @@ function About() {
       </section>
 
       {/* ========== CERTIFICATIONS SECTION ========== */}
-      <section className="bg-secondary py-20">
+      <section className="bg-secondary py-14">
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
           <span className="text-sm font-semibold uppercase tracking-wider text-accent">
             Our Credentials
@@ -376,7 +376,7 @@ function About() {
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
             Backed by industry standards and technology partnerships that ensure reliability.
           </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6">
             {[
               { icon: Award, label: "ISO Certified" },
               { icon: ShieldCheck, label: "Global Technology Partners" },
