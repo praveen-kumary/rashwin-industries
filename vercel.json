@@ -7,7 +7,7 @@
   },
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!assets/|products/|.*\\..*$).*)",
       "destination": "/api/server"
     }
   ]
