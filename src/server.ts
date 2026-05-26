@@ -1,4 +1,5 @@
 import "./lib/error-capture";
+import { createServer } from "http";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
@@ -83,74 +84,72 @@ export default entry;
 
 // For standalone Node.js execution (such as on Hostinger VPS or Node.js hosting)
 if (typeof process !== "undefined" && !process.env.VERCEL) {
-  import("http").then(({ createServer }) => {
-    const port = process.env.PORT || 3000;
-    const server = createServer(async (req, res) => {
-      try {
-        const protocol = req.headers["x-forwarded-proto"] || "http";
-        const host = req.headers.host || `localhost:${port}`;
-        const url = `${protocol}://${host}${req.url}`;
+  const port = process.env.PORT || 3000;
+  const server = createServer(async (req, res) => {
+    try {
+      const protocol = req.headers["x-forwarded-proto"] || "http";
+      const host = req.headers.host || `localhost:${port}`;
+      const url = `${protocol}://${host}${req.url}`;
 
-        const headers = new Headers();
-        for (const [key, val] of Object.entries(req.headers)) {
-          if (val) {
-            if (Array.isArray(val)) {
-              val.forEach((v) => headers.append(key, v));
-            } else {
-              headers.set(key, val);
-            }
+      const headers = new Headers();
+      for (const [key, val] of Object.entries(req.headers)) {
+        if (val) {
+          if (Array.isArray(val)) {
+            val.forEach((v) => headers.append(key, v));
+          } else {
+            headers.set(key, val);
           }
         }
+      }
 
-        let body: Buffer | undefined;
-        if (req.method !== "GET" && req.method !== "HEAD") {
-          const chunks: Buffer[] = [];
-          for await (const chunk of req) {
-            chunks.push(chunk);
-          }
-          body = Buffer.concat(chunks);
+      let body: Buffer | undefined;
+      if (req.method !== "GET" && req.method !== "HEAD") {
+        const chunks: Buffer[] = [];
+        for await (const chunk of req) {
+          chunks.push(chunk);
         }
+        body = Buffer.concat(chunks);
+      }
 
-        const webReq = new Request(url, {
-          method: req.method,
-          headers,
-          body,
-        });
+      const webReq = new Request(url, {
+        method: req.method,
+        headers,
+        body,
+      });
 
-        const webRes = await entry.fetch(webReq, {}, {});
+      const webRes = await entry.fetch(webReq, {}, {});
 
-        res.statusCode = webRes.status;
-        webRes.headers.forEach((val, key) => {
-          if (key === "set-cookie") {
-            if (typeof (webRes.headers as any).getSetCookie === "function") {
-              res.setHeader(key, (webRes.headers as any).getSetCookie());
-            } else {
-              res.setHeader(key, val);
-            }
+      res.statusCode = webRes.status;
+      webRes.headers.forEach((val, key) => {
+        if (key === "set-cookie") {
+          if (typeof (webRes.headers as any).getSetCookie === "function") {
+            res.setHeader(key, (webRes.headers as any).getSetCookie());
           } else {
             res.setHeader(key, val);
           }
-        });
-
-        if (webRes.body) {
-          const reader = webRes.body.getReader();
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            res.write(value);
-          }
+        } else {
+          res.setHeader(key, val);
         }
-        res.end();
-      } catch (err) {
-        console.error("HTTP server error:", err);
-        res.statusCode = 500;
-        res.end("Internal Server Error");
-      }
-    });
+      });
 
-    server.listen(port, () => {
-      console.log(`Server listening on http://localhost:${port}`);
-    });
+      if (webRes.body) {
+        const reader = webRes.body.getReader();
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          res.write(value);
+        }
+      }
+      res.end();
+    } catch (err) {
+      console.error("HTTP server error:", err);
+      res.statusCode = 500;
+      res.end("Internal Server Error");
+    }
+  });
+
+  server.listen(port, () => {
+    console.log(`Server listening on http://localhost:${port}`);
   });
 }
 
