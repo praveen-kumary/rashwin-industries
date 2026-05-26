@@ -74,12 +74,36 @@ export function Footer() {
             Our Products
           </h4>
           <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
-            <li>Industrial PC</li>
-            <li>Rackmount & Workstation PC</li>
-            <li>Touch Screen Displays</li>
-            <li>Ethernet Switches</li>
-            <li>Protocol Converters</li>
-            <li>GPS Vehicle Tracking</li>
+            <li>
+              <Link to="/products/industrial-pc" className="hover:text-accent transition-colors">
+                Industrial PC
+              </Link>
+            </li>
+            <li>
+              <Link to="/products/industrial-rackmount-pc" className="hover:text-accent transition-colors">
+                Rackmount & Workstation PC
+              </Link>
+            </li>
+            <li>
+              <Link to="/products/industrial-touch-screen-display" className="hover:text-accent transition-colors">
+                Touch Screen Displays
+              </Link>
+            </li>
+            <li>
+              <Link to="/products/industrial-data-communication" className="hover:text-accent transition-colors">
+                Ethernet Switches
+              </Link>
+            </li>
+            <li>
+              <Link to="/products/industrial-data-communication" className="hover:text-accent transition-colors">
+                Protocol Converters
+              </Link>
+            </li>
+            <li>
+              <Link to="/products" className="hover:text-accent transition-colors">
+                GPS Vehicle Tracking
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
