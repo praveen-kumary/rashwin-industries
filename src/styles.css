@@ -32,23 +32,24 @@
 :root {
   --radius: 0.5rem;
   /* Brand: Maroon #7F001F, Gold #D4AF37 */
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.27 0 0); /* #333 */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.27 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.27 0 0);
-  --primary: #7F001F; /* maroon */
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.97 0.005 20); /* light maroon tint */
-  --secondary-foreground: #7F001F;
-  --muted: oklch(0.97 0.005 20);
-  --muted-foreground: oklch(0.5 0.01 20);
-  --accent: #D4AF37; /* premium gold */
-  --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.6 0.22 27);
-  --border: oklch(0.9 0.01 20);
-  --input: oklch(0.9 0.01 20);
+  /* Brand: Maroon #7F001F, Gold #D4AF37 */
+  --background: #FFFFFF;
+  --foreground: #1F2937; /* Tailwind Gray 800 - softer than pure black */
+  --card: #FFFFFF;
+  --card-foreground: #1F2937;
+  --popover: #FFFFFF;
+  --popover-foreground: #1F2937;
+  --primary: #7F001F; /* Deep Maroon */
+  --primary-foreground: #FFFFFF;
+  --secondary: #F9FAFB; /* Clean off-white/very light gray */
+  --secondary-foreground: #7F001F; /* Maroon text on light backgrounds */
+  --muted: #F3F4F6; /* Light gray for subtle backgrounds */
+  --muted-foreground: #6B7280; /* Gray 500 for secondary text */
+  --accent: #D4AF37; /* Elegant Gold */
+  --accent-foreground: #111827; /* Dark text for high contrast on gold buttons */
+  --destructive: #EF4444;
+  --border: #E5E7EB; /* Subtle light gray border */
+  --input: #E5E7EB;
   --ring: #D4AF37;
 }
 
