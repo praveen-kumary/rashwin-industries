@@ -4,9 +4,9 @@ import { SiteLayout } from "@/components/site/Layout";
 import { MapPin, Mail, Phone, Clock, CheckCircle2 } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
-  validateSearch: (search: Record<string, unknown>) => {
+  validateSearch: (search: Record<string, unknown>): { subject?: string } => {
     return {
-      subject: (search.subject as string) || "",
+      subject: (search.subject as string) || undefined,
     };
   },
   head: () => ({

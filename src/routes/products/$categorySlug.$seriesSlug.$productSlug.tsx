@@ -21,20 +21,33 @@ export const Route = createFileRoute("/products/$categorySlug/$seriesSlug/$produ
     };
   },
   component: ProductDetailPage,
-  loader: ({ params }) => {
-    const category = products.find((c) => c.slug === params.categorySlug);
-    if (!category) throw new Error("Category not found");
-    const series = category.series.find((s) => s.slug === params.seriesSlug);
-    if (!series) throw new Error("Series not found");
-    const product = series.items?.find((p) => p.slug === params.productSlug);
-    if (!product) throw new Error("Product not found");
-    return { category, series, product };
-  },
 });
 
 function ProductDetailPage() {
-  const { categorySlug, seriesSlug } = Route.useParams();
-  const { category, series, product } = Route.useLoaderData();
+  const { categorySlug, seriesSlug, productSlug } = Route.useParams();
+  
+  // Clean, synchronous lookup that works flawlessly on SSR and client transition
+  const category = products.find((c) => c.slug === categorySlug);
+  const series = category?.series.find((s) => s.slug === seriesSlug);
+  const product = series?.items?.find((p) => p.slug === productSlug);
+
+  if (!category || !series || !product) {
+    return (
+      <SiteLayout>
+        <div className="flex min-h-[50vh] flex-col items-center justify-center bg-background px-4 py-12 text-center">
+          <h2 className="font-display text-3xl font-bold text-primary">Product Not Found</h2>
+          <p className="mt-2 text-muted-foreground">The product model you are looking for does not exist.</p>
+          <Link
+            to="/products"
+            className="mt-6 inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-all hover:bg-accent/90"
+          >
+            Back to Products
+          </Link>
+        </div>
+      </SiteLayout>
+    );
+  }
+
   const subItems = product.subItems || [];
 
   return (

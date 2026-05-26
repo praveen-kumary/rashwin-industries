@@ -6,10 +6,11 @@ export const productImages: Record<string, string> = {
   // ═══════════════════════════════════════════════
   "industrial-edge-computing": "/products/industrial-edge-computing.webp",
   "industrial-touch-panel-pc": "/products/industrial-touch-panel-pc.webp",
-  "industrial-server-motherboard": "/products/industrial-server-motherboard.jpg",
+  "industrial-server-motherboard": "/products/industrial-server-motherboard.webp",
   "android-motherboard": "/products/android-motherboard.webp",
   "industrial-rackmount-server-pc": "/products/industrial-rackmount-server-pc.webp",
-  "industrial-rugged-laptop-with-gpu": "/products/industrial-rugged-laptop-with-gpu.webp",
+  "industrial-rugged-laptop-with-gpu": "/products/industrial-rugged-laptop-gpu.webp",
+  "industrial-rugged-laptop-gpu": "/products/industrial-rugged-laptop-gpu.webp",
   "industrial-motherboards": "/products/industrial-motherboards.webp",
   "amd-ryzen-motherboard": "/products/amd-ryzen-motherboard.webp",
   "touch-screen-kiosk": "/products/touch-screen-kiosk.webp",
@@ -137,10 +138,10 @@ export const productImages: Record<string, string> = {
   // ═══════════════════════════════════════════════
   // SERVER MOTHERBOARD ITEMS
   // ═══════════════════════════════════════════════
-  "ri-ser-mb-600-xe": "/products/ri-ser-mb-600-xe.jpg",
-  "ri-ser-mb-620-xe": "/products/ri-ser-mb-620-xe.jpg",
-  "ri-ser-mb-810-xe": "/products/ri-ser-mb-810-xe.jpg",
-  "ri-ser-mb-920-xe": "/products/ri-ser-mb-920-xe.jpg",
+  "ri-ser-mb-600-xe": "/products/ri-ser-mb-600-xe.webp",
+  "ri-ser-mb-620-xe": "/products/ri-ser-mb-620-xe.webp",
+  "ri-ser-mb-810-xe": "/products/ri-ser-mb-810-xe.webp",
+  "ri-ser-mb-920-xe": "/products/ri-ser-mb-920-xe.webp",
 
   // ═══════════════════════════════════════════════
   // ANDROID MOTHERBOARD ITEMS
