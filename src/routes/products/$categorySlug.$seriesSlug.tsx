@@ -1,4 +1,4 @@
-import { createFileRoute, Link, Outlet, useMatch } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet, useMatches } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { products } from "@/data/products";
 import { ArrowRight, ChevronRight, LayoutGrid, Image as ImageIcon } from "lucide-react";
@@ -22,14 +22,11 @@ export const Route = createFileRoute("/products/$categorySlug/$seriesSlug")({
 });
 
 function SeriesLayoutWrapper() {
-  // Check if a child route (product detail) is active
-  let hasChildRoute = false;
-  try {
-    const match = useMatch({ from: "/products/$categorySlug/$seriesSlug/$productSlug", shouldThrow: false });
-    hasChildRoute = !!match;
-  } catch {
-    hasChildRoute = false;
-  }
+  // Check if a child route (product detail) is active using active route matches
+  const matches = useMatches();
+  const hasChildRoute = matches.some(
+    (match) => match.routeId === "/products/$categorySlug/$seriesSlug/$productSlug"
+  );
 
   // If child route is active, just render the Outlet
   if (hasChildRoute) {
