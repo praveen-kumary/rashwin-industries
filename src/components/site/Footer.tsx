@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
           <div className="flex items-center gap-3">
-            <img src="/rashwin.png" alt="Rashwin Industries Logo" className="h-14 sm:h-16 md:h-20 w-auto object-contain scale-110 origin-left drop-shadow-[0_0_12px_rgba(230,194,128,0.5)] transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(230,194,128,0.8)]" />
+            <img src="/rashwin.png" alt="Rashwin Industries Logo" className="h-14 sm:h-16 md:h-16 w-auto object-contain scale-110 origin-left drop-shadow-[0_0_12px_rgba(230,194,128,0.5)] transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(230,194,128,0.8)]" />
           </div>
           <p className="mt-4 text-sm leading-relaxed text-primary-foreground/75">
             Manufacturers and suppliers of industrial computing & networking products since 2012.
