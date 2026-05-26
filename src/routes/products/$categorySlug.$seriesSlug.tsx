@@ -122,7 +122,7 @@ function SeriesRouteHandler() {
                 const cardContent = (
                   <>
                     {/* Image */}
-                    <div className="relative aspect-square bg-gradient-to-br from-muted/80 to-muted/40 flex items-center justify-center overflow-hidden">
+                    <div className="relative aspect-square bg-white flex items-center justify-center overflow-hidden">
                       {productImages[item.slug] ? (
                         <img
                           src={productImages[item.slug]}

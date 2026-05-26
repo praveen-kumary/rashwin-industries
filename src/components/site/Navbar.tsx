@@ -62,21 +62,21 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-200 ${
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-border/80"
+          ? "bg-background/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-b border-border/40"
           : "bg-background border-b border-transparent"
       }`}
       onMouseLeave={handleMouseLeave}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm">
-            <Factory size={18} />
+        <Link to="/" className="flex items-center gap-2 sm:gap-2.5 max-w-[70%]">
+          <span className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm shrink-0">
+            <Factory size={16} className="sm:w-[18px] sm:h-[18px]" />
           </span>
-          <span className="font-display text-lg font-bold tracking-tight text-primary">
-            Rashwin <span className="text-accent">Industries</span>
+          <span className="font-display text-[15px] sm:text-lg font-bold tracking-tight text-primary truncate">
+            Rashwin <span className="text-accent hidden sm:inline">Industries</span>
           </span>
         </Link>
 

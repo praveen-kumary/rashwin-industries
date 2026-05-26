@@ -16,7 +16,7 @@ export function EdgeComputingPage({ category, series }: Props) {
       {/* Breadcrumb */}
       <div className="border-b border-border bg-card/80 sticky top-16 z-20 backdrop-blur-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 py-4 text-sm text-muted-foreground overflow-x-auto whitespace-nowrap">
+          <div className="flex flex-wrap items-center gap-2 py-3 text-[11px] sm:text-xs text-muted-foreground">
             <Link to="/" className="hover:text-accent transition-colors">
               Home
             </Link>
@@ -68,7 +68,7 @@ export function EdgeComputingPage({ category, series }: Props) {
               const cardContent = (
                 <>
                   {/* Image */}
-                  <div className="relative aspect-square bg-gradient-to-br from-muted/80 to-muted/40 flex items-center justify-center overflow-hidden">
+                  <div className="relative aspect-square bg-white flex items-center justify-center overflow-hidden">
                     {productImages[item.slug] ? (
                       <img
                         src={productImages[item.slug]}

@@ -79,7 +79,7 @@ function CategoryIndexPage() {
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary-foreground/50">
+          <nav className="flex flex-wrap items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-primary-foreground/60 mb-6">
             <Link to="/" className="hover:text-accent transition-colors">
               Home
             </Link>
@@ -91,7 +91,7 @@ function CategoryIndexPage() {
             <span className="text-accent">{category.title}</span>
           </nav>
 
-          <div className="mt-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="mt-6 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between animate-in fade-in slide-in-from-bottom-4 duration-700 ease-out">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 rounded-full bg-accent/15 px-4 py-1.5 text-xs font-bold text-accent border border-accent/25 backdrop-blur-sm">
                 <Icon size={14} />
@@ -120,7 +120,7 @@ function CategoryIndexPage() {
                 className="group relative flex flex-col rounded-2xl border border-border/60 bg-card shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent/40 overflow-hidden"
               >
                 {/* Image */}
-                <div className="relative aspect-[4/3] bg-gradient-to-br from-muted to-muted/60 flex items-center justify-center overflow-hidden">
+                <div className="relative aspect-[4/3] bg-white flex items-center justify-center overflow-hidden">
                   {seriesImages[sub.slug] ? (
                     <img
                       src={seriesImages[sub.slug]}

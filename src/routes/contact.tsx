@@ -18,7 +18,7 @@ export const Route = createFileRoute("/contact")({
           "Reach Rashwin Industries for product inquiries, support, or partnership opportunities.",
       },
       { property: "og:title", content: "Contact Rashwin Industries" },
-      { property: "og:description", content: "Get in touch with our team in Chennai, India." },
+      { property: "og:description", content: "Get in touch with our team in Bangalore, India." },
     ],
   }),
   component: Contact,
@@ -70,13 +70,13 @@ function Contact() {
               {
                 Icon: MapPin,
                 title: "Address",
-                body: "No. 20, First Floor, East Jones Road, Saidapet, Chennai-600015, India.",
+                body: "No. 859/B, SY28/2 NTI LAYOUT 2ND PHASE, RAJIV GANDHI NAGAR, BANGALORE URBAN, KARNATAKA - 560097",
               },
               {
                 Icon: Mail,
                 title: "Email",
-                body: "mani@rashwin.com",
-                href: "mailto:mani@rashwin.com",
+                body: "info@rashwinindustries.com",
+                href: "mailto:info@rashwinindustries.com",
               },
               { Icon: Phone, title: "Phone", body: "+91 8608520520", href: "tel:+918608520520" },
               {
@@ -85,18 +85,19 @@ function Contact() {
                 body: "Monday to Friday, 9:00 AM to 6:00 PM IST",
               },
             ].map(({ Icon, title, body, href }) => (
-              <div key={title} className="flex gap-4 rounded-xl border border-border bg-card p-5">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground">
-                  <Icon size={18} />
+              <div key={title} className="group relative flex gap-4 rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-accent/40 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent text-accent-foreground shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_15px_rgba(251,146,60,0.5)]">
+                  <Icon size={20} className="transition-transform duration-300" />
                 </div>
-                <div>
-                  <div className="font-semibold text-primary">{title}</div>
+                <div className="relative z-10 flex flex-col justify-center">
+                  <div className="font-display font-bold text-primary text-lg transition-colors duration-300 group-hover:text-accent">{title}</div>
                   {href ? (
-                    <a href={href} className="text-sm text-muted-foreground hover:text-accent">
+                    <a href={href} className="mt-1 text-sm font-medium text-muted-foreground hover:text-accent transition-colors">
                       {body}
                     </a>
                   ) : (
-                    <div className="text-sm text-muted-foreground">{body}</div>
+                    <div className="mt-1 text-sm text-muted-foreground leading-relaxed">{body}</div>
                   )}
                 </div>
               </div>
@@ -104,7 +105,7 @@ function Contact() {
             <div className="overflow-hidden rounded-xl border border-border">
               <iframe
                 title="Rashwin Industries Location"
-                src="https://www.google.com/maps?q=Saidapet,+Chennai,+India&output=embed"
+                src="https://www.google.com/maps?q=859%2FB%2C+SY28%2F2+NTI+LAYOUT+2ND+PHASE%2C+RAJIV+GANDHI+NAGAR%2C+BANGALORE+URBAN%2C+KARNATAKA+-+560097&output=embed"
                 className="h-64 w-full"
                 loading="lazy"
               />
@@ -112,7 +113,8 @@ function Contact() {
           </div>
 
           {/* Form */}
-          <div className="rounded-2xl border border-border bg-card p-8">
+          <div className="relative rounded-3xl border border-border bg-card p-8 sm:p-10 shadow-xl transition-all hover:border-accent/30 hover:shadow-2xl">
+            <div className="absolute top-0 right-0 h-32 w-32 rounded-full bg-accent/5 blur-3xl" />
             <h2 className="font-display text-2xl font-bold text-primary">Send Us a Message</h2>
             {sent && (
               <div className="mt-4 flex items-center gap-2 rounded-md border border-accent/30 bg-accent/10 p-3 text-sm font-medium text-primary">
@@ -150,12 +152,17 @@ function Contact() {
                   <p className="mt-1 text-xs text-destructive">{errors.message}</p>
                 )}
               </div>
-              <button
-                type="submit"
-                className="w-full rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
-              >
-                Send Message
-              </button>
+              <div className="pt-2">
+                <button
+                  type="submit"
+                  className="group relative w-full overflow-hidden rounded-xl bg-accent px-5 py-3.5 text-sm font-bold tracking-wide text-accent-foreground shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
+                >
+                  <div className="absolute inset-0 bg-white/20 translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
+                  <span className="relative flex items-center justify-center gap-2">
+                    Send Message <Mail size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </button>
+              </div>
             </form>
           </div>
         </div>

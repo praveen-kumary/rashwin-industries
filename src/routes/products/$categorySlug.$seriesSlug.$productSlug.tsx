@@ -27,7 +27,7 @@ function ProductDetailPage() {
       {/* ── Breadcrumb Bar ───────────────────────────────────────── */}
       <div className="border-b border-border bg-card/80 sticky top-16 z-20 backdrop-blur-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 py-4 text-sm text-muted-foreground overflow-x-auto whitespace-nowrap">
+          <div className="flex flex-wrap items-center gap-2 py-3 text-[11px] sm:text-xs text-muted-foreground">
             <Link to="/" className="hover:text-accent transition-colors">
               Home
             </Link>
@@ -87,7 +87,7 @@ function ProductDetailPage() {
                   className="group flex flex-col rounded-2xl bg-card shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-border/40 hover:border-accent/30"
                 >
                   {/* Image */}
-                  <div className="relative aspect-square bg-gradient-to-br from-muted/80 to-muted/40 flex items-center justify-center overflow-hidden">
+                  <div className="relative aspect-square bg-white flex items-center justify-center overflow-hidden">
                     {productImages[sub.slug] ? (
                       <img
                         src={productImages[sub.slug]}

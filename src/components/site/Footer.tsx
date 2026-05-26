@@ -35,13 +35,12 @@ export function Footer() {
           </h4>
           <ul className="mt-4 space-y-3 text-sm text-primary-foreground/80">
             <li className="flex gap-3">
-              <MapPin size={16} className="mt-0.5 shrink-0 text-accent" /> No. 20, First Floor, East
-              Jones Road, Saidapet, Chennai-600015, India.
+              <MapPin size={16} className="mt-0.5 shrink-0 text-accent" /> No. 859/B, SY28/2 NTI LAYOUT 2ND PHASE, RAJIV GANDHI NAGAR, BANGALORE URBAN, KARNATAKA - 560097
             </li>
             <li className="flex gap-3">
               <Mail size={16} className="mt-0.5 shrink-0 text-accent" />{" "}
-              <a href="mailto:mani@rashwin.com" className="hover:text-accent">
-                mani@rashwin.com
+              <a href="mailto:info@rashwinindustries.com" className="hover:text-accent">
+                info@rashwinindustries.com
               </a>
             </li>
             <li className="flex gap-3">

@@ -70,7 +70,7 @@ export function TouchPanelPage({ category, series }: Props) {
               const cardContent = (
                 <>
                   <div className="flex flex-col gap-4 flex-grow">
-                    <div className="w-full aspect-video rounded-lg bg-muted flex items-center justify-center text-muted-foreground border border-border/50 overflow-hidden">
+                    <div className="w-full aspect-video rounded-lg bg-white flex items-center justify-center text-muted-foreground border border-border/50 overflow-hidden">
                       {productImages[item.slug] ? (
                         <img src={productImages[item.slug]} alt={item.title} className="w-full h-full object-contain" />
                       ) : (

@@ -139,9 +139,10 @@ function Home() {
                 ].map((ind, idx) => (
                   <div
                     key={idx}
-                    className="flex gap-4 rounded-lg border border-border/55 bg-card p-4 transition-all hover:border-accent/45 hover:shadow-sm"
+                    className="group flex gap-4 rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg cursor-pointer overflow-hidden relative"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                       <ind.icon size={20} />
                     </div>
                     <div>
@@ -216,9 +217,11 @@ function Home() {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="rounded-xl border border-border bg-card p-6 text-center transition-all hover:-translate-y-1 hover:shadow-lg"
+                className="group relative rounded-2xl border border-border bg-card p-8 text-center transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl overflow-hidden"
               >
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent/10 text-accent">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:bottom-0" />
+                <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-secondary text-primary transition-all duration-500 group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(251,146,60,0.3)]">
                   <item.icon size={26} />
                 </div>
                 <h3 className="mt-4 text-xl font-bold text-primary">{item.title}</h3>
@@ -243,7 +246,7 @@ function Home() {
             Industrial Panel PCs, Industrial Embedded Box PCs, Industrial Rackmount Computers, Touch
             Screens, Ethernet Converters, and RS232 Repeaters.
           </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
             {[
               { label: "ISO Certified", icon: Award },
               { label: "CE Compliant", icon: ShieldCheck },
@@ -252,9 +255,9 @@ function Home() {
             ].map(({ label, icon: Icon }) => (
               <div
                 key={label}
-                className="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-semibold text-primary shadow-sm"
+                className="group flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-primary shadow-sm transition-all duration-300 hover:border-accent/40 hover:shadow-md cursor-default"
               >
-                <Icon size={16} className="text-accent" /> {label}
+                <Icon size={18} className="text-accent transition-transform duration-300 group-hover:scale-110" /> {label}
               </div>
             ))}
           </div>
@@ -271,20 +274,22 @@ function Home() {
             Get in touch with our team for product inquiries, technical support, or partnership
             opportunities.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6">
+          <div className="mt-8 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6">
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
             >
               Contact Us Today <ArrowRight size={16} />
             </Link>
-            <div className="flex items-center gap-2 text-primary-foreground/80">
-              <Phone size={18} />
-              <span>+91 8608520520</span>
-            </div>
-            <div className="flex items-center gap-2 text-primary-foreground/80">
-              <Mail size={18} />
-              <span>mani@rashwin.com</span>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <div className="flex items-center gap-2 text-primary-foreground/80">
+                <Phone size={18} />
+                <span>+91 8608520520</span>
+              </div>
+              <div className="flex items-center gap-2 text-primary-foreground/80">
+                <Mail size={18} />
+                <span>info@rashwinindustries.com</span>
+              </div>
             </div>
           </div>
         </div>
