@@ -5,6 +5,21 @@ import { ChevronRight, LayoutGrid, ArrowRight, Image as ImageIcon } from "lucide
 import { productImages } from "@/data/productImages";
 
 export const Route = createFileRoute("/products/$categorySlug/$seriesSlug/$productSlug")({
+  head: ({ params }) => {
+    const category = products.find((c) => c.slug === params.categorySlug);
+    const series = category?.series.find((s) => s.slug === params.seriesSlug);
+    const product = series?.items?.find((p) => p.slug === params.productSlug);
+    const title = product ? `${product.title} (${product.modelNo || ""}) — Rashwin Industries` : "Product Details | Rashwin Industries";
+    const description = product ? `Get specifications and information on ${product.title} (${product.modelNo || ""}), premium industrial computing hardware from Rashwin Industries.` : "Explore detailed industrial computing model and system specifications.";
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+      ],
+    };
+  },
   component: ProductDetailPage,
   loader: ({ params }) => {
     const category = products.find((c) => c.slug === params.categorySlug);

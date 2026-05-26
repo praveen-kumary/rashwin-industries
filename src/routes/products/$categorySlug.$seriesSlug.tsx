@@ -7,6 +7,20 @@ import { EdgeComputingPage } from "@/components/series/EdgeComputingPage";
 import { TouchPanelPage } from "@/components/series/TouchPanelPage";
 
 export const Route = createFileRoute("/products/$categorySlug/$seriesSlug")({
+  head: ({ params }) => {
+    const category = products.find((c) => c.slug === params.categorySlug);
+    const series = category?.series.find((s) => s.slug === params.seriesSlug);
+    const title = series ? `${series.title} — ${category?.title || "Products"} | Rashwin Industries` : "Product Series | Rashwin Industries";
+    const description = series?.description || series?.short || "Explore our rugged industrial computing and networking solutions built for heavy automation.";
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+      ],
+    };
+  },
   component: SeriesLayoutWrapper,
   loader: ({ params }) => {
     const category = products.find((c) => c.slug === params.categorySlug);
