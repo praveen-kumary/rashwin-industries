@@ -270,7 +270,7 @@ export const productImages: Record<string, string> = {
   // ═══════════════════════════════════════════════
   // MODBUS GATEWAY ITEMS
   // ═══════════════════════════════════════════════
-  "mootek-3202-gateway": "/products/mootek-3202-gateway.webp",
+  "ri-3202-gateway": "/products/ri-3202-gateway.webp",
   "gw1101": "/products/gw1101.webp",
   "gw1102": "/products/gw1102.webp",
   "gw1114": "/products/gw1114.webp",

@@ -644,7 +644,7 @@ export const products: Product[] = [
           Storage_Temp: "-45°C to 85°C",
         },
         items: [
-          { slug: "mootek-3202-gateway", modelNo: "MOOTEK-3202-GATEWAY", title: "industrial modbus gateway" },
+          { slug: "ri-3202-gateway", modelNo: "RI-3202-GATEWAY", title: "Industrial Modbus Gateway" },
           { slug: "gw1101", modelNo: "GW1101", title: "1D(3INI)-DB-P(12-48VDC)-1PORT RS 232/485/422 To Ethernet Modbus Gateway" },
           { slug: "gw1102", modelNo: "GW1102", title: "2D(3INI)-DB-P(12-48VDC)-2 PORT RS-232/485/422 To Ethernet Modbus Gateway" },
           { slug: "gw1114", modelNo: "GW1114", title: "4DI(RS-485)-TB-P(12-48VDC) 4 PORT RS-485 To Ethernet Modbus Gateway" },
