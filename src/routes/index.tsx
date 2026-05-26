@@ -161,8 +161,8 @@ function Home() {
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-accent/20 to-primary/10 blur-xl opacity-70" />
               <div className="relative overflow-hidden rounded-2xl border border-border/40 bg-card shadow-2xl">
                 <img
-                  src="/products/industrial-server-motherboard.webp"
-                  alt="Industrial Server Motherboard"
+                  src="/industrial_sectors.png"
+                  alt="Industrial Sectors We Support"
                   className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
                   loading="lazy"
                 />
