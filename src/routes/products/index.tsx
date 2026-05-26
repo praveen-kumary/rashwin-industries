@@ -27,7 +27,7 @@ function ProductsPage() {
     <SiteLayout>
       {/* Hero Header */}
       <section className="relative overflow-hidden bg-primary py-12 text-primary-foreground sm:py-16">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(251,146,60,0.15),transparent_45%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.15),transparent_45%)]" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span className="text-sm font-semibold uppercase tracking-wider text-accent">
             Products & Solutions

@@ -87,7 +87,7 @@ function Contact() {
             ].map(({ Icon, title, body, href }) => (
               <div key={title} className="group relative flex gap-4 rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-accent/40 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent text-accent-foreground shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_15px_rgba(251,146,60,0.5)]">
+                <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent text-accent-foreground shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_15px_rgba(212,175,55,0.5)]">
                   <Icon size={20} className="transition-transform duration-300" />
                 </div>
                 <div className="relative z-10 flex flex-col justify-center">

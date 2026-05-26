@@ -68,7 +68,7 @@ function SeriesRouteHandler() {
     <SiteLayout>
       {/* ── Hero ──────────────────────────────────────────────────── */}
       <section className="relative bg-primary py-14 sm:py-18 text-primary-foreground overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(251,146,60,0.1),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,175,55,0.1),transparent_55%)]" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary-foreground/50">

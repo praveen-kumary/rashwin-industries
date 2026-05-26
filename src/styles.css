@@ -31,25 +31,25 @@
 
 :root {
   --radius: 0.5rem;
-  /* Brand: Dark Blue #0A2647, Industrial Orange #E87A00 */
+  /* Brand: Maroon #7F001F, Gold #D4AF37 */
   --background: oklch(1 0 0);
   --foreground: oklch(0.27 0 0); /* #333 */
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.27 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.27 0 0);
-  --primary: oklch(0.25 0.07 250); /* dark blue #0A2647 */
+  --primary: #7F001F; /* maroon */
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.97 0.005 250); /* light gray #F5F7FA */
-  --secondary-foreground: oklch(0.25 0.07 250);
-  --muted: oklch(0.97 0.005 250);
-  --muted-foreground: oklch(0.5 0.01 250);
-  --accent: oklch(0.69 0.17 50); /* industrial orange #E87A00 */
+  --secondary: oklch(0.97 0.005 20); /* light maroon tint */
+  --secondary-foreground: #7F001F;
+  --muted: oklch(0.97 0.005 20);
+  --muted-foreground: oklch(0.5 0.01 20);
+  --accent: #D4AF37; /* premium gold */
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.6 0.22 27);
-  --border: oklch(0.9 0.01 250);
-  --input: oklch(0.9 0.01 250);
-  --ring: oklch(0.69 0.17 50);
+  --border: oklch(0.9 0.01 20);
+  --input: oklch(0.9 0.01 20);
+  --ring: #D4AF37;
 }
 
 @layer base {

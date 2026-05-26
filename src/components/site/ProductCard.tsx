@@ -23,7 +23,7 @@ export function ProductCard({
       {/* Decorative Blur Orb */}
       <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-accent/20 blur-2xl transition-all duration-500 group-hover:bg-accent/30 group-hover:scale-150" />
 
-      <div className="relative z-10 mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-secondary text-primary border border-border/50 shadow-sm transition-all duration-500 group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_20px_rgba(251,146,60,0.4)] group-hover:border-accent/50">
+      <div className="relative z-10 mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-secondary text-primary border border-border/50 shadow-sm transition-all duration-500 group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] group-hover:border-accent/50">
         <Icon size={26} className="transition-transform duration-500" />
       </div>
 

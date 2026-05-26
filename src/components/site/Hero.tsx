@@ -5,8 +5,8 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-primary text-primary-foreground">
       {/* Animated Mesh & Grid */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(251,146,60,0.15),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(251,146,60,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,175,55,0.15),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(212,175,55,0.1),transparent_50%)]" />
       <div
         aria-hidden
         className="absolute inset-0 opacity-[0.06]"
